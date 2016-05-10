@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a2a4ce56-2b8c-4fd6-98d9-20da5c4a5373" activeEnvironment="Default" name="sample" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a6d20837-d642-41c1-91b9-6bddcde0d459" wsaVersion="NONE" name="StockQuoteSoapBinding" type="wsdl" bindingName="{http://example.com/stockquote.wsdl}StockQuoteSoapBinding" soapVersion="1_1" anonymous="optional" definition="file:/C:/SGR/sample.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:\C:\SGR\sample.wsdl"><con:part><con:url>file:\C:\SGR\sample.wsdl</con:url><con:content><![CDATA[<definitions name="StockQuote" targetNamespace="http://example.com/stockquote.wsdl" xmlns:tns="http://example.com/stockquote.wsdl" xmlns:xsd1="http://example.com/stockquote.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <schema targetNamespace="http://example.com/stockquote.xsd" xmlns="http://www.w3.org/2000/10/XMLSchema">
+      <element name="TradePriceRequest">
+        <complexType>
+          <all>
+            <element name="tickerSymbol" type="string"/>
+          </all>
+        </complexType>
+      </element>
+      <element name="TradePrice">
+        <complexType>
+          <all>
+            <element name="price" type="float"/>
+          </all>
+        </complexType>
+      </element>
+    </schema>
+  </types>
+  <message name="GetLastTradePriceInput">
+    <part name="body" element="xsd1:TradePriceRequest"/>
+  </message>
+  <message name="GetLastTradePriceOutput">
+    <part name="body" element="xsd1:TradePrice"/>
+  </message>
+  <portType name="StockQuotePortType">
+    <operation name="GetLastTradePrice">
+      <input message="tns:GetLastTradePriceInput"/>
+      <output message="tns:GetLastTradePriceOutput"/>
+    </operation>
+  </portType>
+  <binding name="StockQuoteSoapBinding" type="tns:StockQuotePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetLastTradePrice">
+      <soap:operation soapAction="http://example.com/GetLastTradePrice"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="StockQuoteService">
+    <documentation>My first service</documentation>
+    <port name="StockQuotePort" binding="tns:StockQuoteSoapBinding">
+      <soap:address location="http://example.com/stockquote"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://ITEM-72885:8088/StockQuoteSoapBinding</con:endpoint><con:endpoint>http://example.com/stockquote</con:endpoint></con:endpoints><con:operation id="6cc43f04-ac4d-41ba-8041-6e6993e7ceb3" isOneWay="false" action="http://example.com/GetLastTradePrice" name="GetLastTradePrice" bindingOperationName="GetLastTradePrice" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d84dc764-b0a2-4076-9bf8-eec5a8ab86b9" name="Request NTDS"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ITEM-72885:8088/StockQuoteSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stoc="http://example.com/stockquote.xsd">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <stoc:TradePriceRequest>
+      	<stoc:tickerSymbol>NTDS</stoc:tickerSymbol>
+      </stoc:TradePriceRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/GetLastTradePrice"/><con:wsrmConfig version="1.2"/></con:call><con:call id="575f9886-00fe-4abb-825e-83a5d629ae28" name="Request APP6"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ITEM-72885:8088/StockQuoteSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stoc="http://example.com/stockquote.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <stoc:TradePriceRequest>
+      	<stoc:tickerSymbol>APP6</stoc:tickerSymbol>
+      </stoc:TradePriceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/GetLastTradePrice"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="99f7177e-9331-428d-a6af-63179f9fe646" name="TestSuite 1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2db4ac33-1174-4d72-a67e-5a53b20449b1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase 1" searchProperties="true"><con:settings/><con:testStep type="request" name="SOAP Request APP6" id="7aa3d1a6-b47a-4665-8f0f-f5a0b8fe21d0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>StockQuoteSoapBinding</con:interface><con:operation>GetLastTradePrice</con:operation><con:request name="SOAP Request APP6" id="6ebce2bf-e330-4e0a-af76-73ead2625bc0"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ITEM-72885:8088/StockQuoteSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stoc="http://example.com/stockquote.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <stoc:TradePriceRequest>
+      	<stoc:tickerSymbol>APP6</stoc:tickerSymbol>
+      </stoc:TradePriceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4293fd2c-f6ba-4305-b82d-8bd36b3a1574"/><con:assertion type="XPath Match" id="c8c401c4-2198-4fbd-a80f-675979a7c716" name="XPath Match"><con:configuration><path>declare namespace stoc="http://example.com/stockquote.xsd"; 
+//stoc:TradePrice[1] 
+//stoc:Price[1]</path><content>1234</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="SOAP Request NTDS" id="74531921-169c-46e7-9048-b5f7b13b91b6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>StockQuoteSoapBinding</con:interface><con:operation>GetLastTradePrice</con:operation><con:request name="SOAP Request NTDS" id="355666e4-2101-432d-aac4-c2af6b5c9773"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://ITEM-72885:8088/StockQuoteSoapBinding</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stoc="http://example.com/stockquote.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <stoc:TradePriceRequest>
+      	<stoc:tickerSymbol>NTDS</stoc:tickerSymbol>
+      </stoc:TradePriceRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="e9d4f975-ce60-43ff-8de0-31b99bc26676"/><con:assertion type="XPath Match" id="16231501-70f8-4acb-be9b-1f13b9b70156" name="XPath Match"><con:configuration><path>declare namespace stoc="http://example.com/stockquote.xsd"; 
+//stoc:TradePrice[1] 
+//stoc:Price[1]</path><content>5678</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="6001e480-c5a3-444a-a010-b648ff43a317" port="8088" path="/StockQuoteSoapBinding" host="ITEM-72885" name="StockQuoteSoapBinding"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetLastTradePrice" id="40bc2469-632b-48db-98dc-776d0d2330c5" interface="StockQuoteSoapBinding" operation="GetLastTradePrice"><con:settings/><con:defaultResponse>Response 1234</con:defaultResponse><con:dispatchStyle>QUERY_MATCH</con:dispatchStyle><con:response name="Response 1234" id="74255ea4-2f0e-4ab9-b3e6-d8084e2dd5b9" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stoc="http://example.com/stockquote.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <stoc:TradePrice>
+      	<stoc:Price>1234</stoc:Price>
+      </stoc:TradePrice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="TRUE" version="200508" action="http://example.com/GetLastTradePrice" addDefaultAction="false"/></con:response><con:response name="Response 5678" id="01173428-3550-4276-bc4c-7fdfffa4f4eb" httpResponseStatus="500" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:stoc="http://example.com/stockquote.xsd">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <stoc:TradePrice>
+      	<stoc:Price>5678</stoc:Price>
+      </stoc:TradePrice>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/GetLastTradePrice"/></con:response><con:dispatchConfig xsi:type="con:MockOperationQueryMatchDispatch" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:query><con:name>NTDS</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace stoc='http://example.com/stockquote.xsd';
+//stoc:TradePriceRequest[1]
+//stoc:tickerSymbol[1]
+</con:query><con:match>NTDS</con:match><con:response>Response 5678</con:response></con:query><con:query><con:name>APP6</con:name><con:query>declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace stoc='http://example.com/stockquote.xsd';
+//stoc:TradePriceRequest[1]
+//stoc:tickerSymbol[1]
+</con:query><con:match>APP6</con:match><con:response>Response 1234</con:response></con:query></con:dispatchConfig></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
