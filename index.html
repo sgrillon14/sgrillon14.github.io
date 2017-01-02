@@ -1,61 +1,283 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>Stéphane GRILLON by sgrillon14</title>
-  </head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
 
-  <body>
-    <div id="container">
-      <div class="inner">
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-        <header>
-          <h1>Stéphane GRILLON</h1>
-          <h2></h2>
-        </header>
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+  
+    <!-- Left Column -->
+    <div class="w3-third">
+    
+      <div class="w3-white w3-text-grey w3-card-4">
+        <div class="w3-display-container">
+          <img src="https://raw.githubusercontent.com/sgrillon14/sgrillon14.github.io/master/images/sgrillon.png" style="width:100%" alt="Avatar">
+          <div class="w3-display-bottomleft w3-container w3-text-black">
+            <h2>Stéphane GRILLON</h2>
+          </div>
+        </div>
+        <div class="w3-container">
+          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Développeur/Architecte</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Rennes, FR</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>sgrillon@hotmail.fr</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>06 64 70 34 61</p>
+          <hr>
 
-<section id="downloads" class="clearfix">
-  <a href="https://github.com/sgrillon14" id="view-on-github" class="button"><span>View on GitHub</span></a>
-</section>
+          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Compétences</b></p>
+          <p>Java</p>
+          <div class="w3-progress-container w3-round-xlarge w3-small">
+            <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:90%">
+              <div class="w3-center w3-text-white">90%</div>
+            </div>
+          </div>
+          <p>Testing</p>
+          <div class="w3-progress-container w3-round-xlarge w3-small">
+            <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:100%">
+              <div class="w3-center w3-text-white">100%</div>
+            </div>
+          </div>
+          <p>Web</p>
+          <div class="w3-progress-container w3-round-xlarge w3-small">
+            <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:75%">
+              <div class="w3-center w3-text-white">75%</div>
+            </div>
+          </div>
+          <p>Base de données</p>
+          <div class="w3-progress-container w3-round-xlarge w3-small">
+            <div class="w3-progressbar w3-round-xlarge w3-teal" style="width:70%">
+              <div class="w3-center w3-text-white">70%</div>
+            </div>
+          </div>
+          <ul class="list-style-type">
+              <li>Postgres</li>
+              <li>MySQL</li>
+              <li>Oracle</li>
+              <li>RDF</li>
+          </ul>
+          <br>
+        </div>
+      </div><br>
 
-<hr>
-
-<section id="main_content">
-
-<h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Qui suis-je?</h3>
-<p>...</p>
-
-<h3>
-<a id="soap-tests" class="anchor" href="#soap-tests" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SOAP: tests automatisés</h3>
-<p>Dans cet article je vais, au travers d’un exemple, utiliser soapUI pour effectuer toutes les étapes nécessaires à l’élaboration de tests automatisés : tests unitaires en intégration continue. Nous allons donc mettre à l’épreuve soapUI dans le but de créer une suite de tests automatisés...</p>
-<p><a href="https://www.soapui.org/" class="user-mention">Télécharger SoapUI</a></p>
-<p>Vous allez utiliser le fichier <a href="https://github.com/sgrillon14/sgrillon14.github.io/blob/master/datas/soap/sample.wsdl">WSDL d'exemple</a></p>
-<p>Etape 1: création de deux requêtes (avec les valeurs "APP6" et "NTDS" dans notre exemple).</p>
-<img class="img-responsive" src="datas/soap/screenshots/requêtes.png" alt="">
-<p>Etape 2: création des deux réponses (avec les valeurs "1234" pour "APP6" et "5678" pour "NTDS").</p>
-<img class="img-responsive" src="datas/soap/screenshots/responses.png" alt="">
-<img class="img-responsive" src="datas/soap/screenshots/responsesMatchAPP6.png" alt="">
-<img class="img-responsive" src="datas/soap/screenshots/responsesMatchNTDS.png" alt="">
-<p>Etape 3: démarrer le bouchon de l'étape 2.</p>
-<img class="img-responsive" src="datas/soap/screenshots/startStub.png" alt="">
-<p>Etape 4: création de la suite de tests (avec l'execution des deux requêtes et la vérification des deux réponses).</p>
-<img class="img-responsive" src="datas/soap/screenshots/runTests.png" alt="">
-<p>Vous pouvez utiliser le <a href="https://github.com/sgrillon14/sgrillon14.github.io/blob/master/datas/soap/sample-soapui-project.xml">projet SOAPUI</a></p>
-
-</section>
-
-<footer>Suivez <a href="https://github.com/sgrillon14">moi</a> sur GitHub.</footer>
-
-      </div>
+    <!-- End Left Column -->
     </div>
-  </body>
+
+    <!-- Right Column -->
+    <div class="w3-twothird">
+    
+      <div class="w3-container w3-card-2 w3-white w3-margin-bottom">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Expérience professionnelle</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique Java et Test / Orange</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mai 2016 - <span class="w3-tag w3-teal w3-round">maintenant</span></h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, Maven, JUnit, Gherkin, Cucumber, Selenium, Jenkins, Docker, Guardian (SSO), Apache.</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>Développement Java orienté Tests Automatisés pour créer un robot de type Web Scraping.</li>
+              <li>Rédaction de la documentation d’architecture.</li>
+              <li>Rédaction de la documentation technique.</li>
+              <li>Rédaction de la documentation d’installation.</li>
+              <li>Mise en place de l’intégration continue et de la qualimétrie de l’application.</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique / DGA</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, ...</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique / Orange</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, ...</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique / Orange</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, ...</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique / Orange</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, ...</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique / Orange</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, ...</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+          </ul>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Leader technique / Orange</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+          <h7><b>Environnement Technique :</b></h7>
+          <ul class="list-style-type">
+              <li>Java, ...</li>
+          </ul>
+          <h7><b>Mission :</b></h7>
+          <ul class="list-style-type">
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+              <li>...</li>
+          </ul>
+          <hr>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card-2 w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Formation professionnelles</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>BreizhCamp et JUG (35)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2011 - 2016</h6>
+          <p></p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Capgemini Academy</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012</h6>
+          <p>Communication Orale Efficace</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>ORSYS (35)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010</h6>
+          <p>C# développer en .NET avec VS 2008/2005</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Avenir conseil (92)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009</h6>
+          <p>Gestion de projet</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Valtech-training (92)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009</h6>
+          <p>Conception d'applications Web d'entreprise avec java EE</p>
+          <hr>
+        </div>
+      </div>
+
+      <div class="w3-container w3-card-2 w3-white">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Formation initiale</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>École Nationale Supérieure d'Ingénieurs de Bretagne-Sud (56)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2006</h6>
+          <p>Master 2 CGSEIP GEII</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Université de Bretagne Sud (56)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2004</h6>
+          <p>Licence Génie Électrique et Informatique Industrielle</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Université de Bretagne Sud (56)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2003</h6>
+          <p>DEUG Sciences et Techniques de l'Ingénieur</p><br>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Université de Bretagne Occidentale (29)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2002</h6>
+          <p>DUT Génie Électrique et Informatique Industrielle</p><br>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Lorient (56)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2000</h6>
+          <p>Baccalauréat</p><br>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Rennes (35)</b></h5>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1998</h6>
+          <p>CAP / BEP Électrotechnique</p><br>
+        </div>
+      </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+
+<footer class="w3-container w3-teal w3-center w3-margin-top">
+  <p>Trouvez-moi sur les réseaux sociaux.</p>
+  <a href="https://github.com/sgrillon14" target="_blank" class="fa fa-github w3-hover-text-black w3-large"></a>
+  <a href="http://stackoverflow.com/users/3535537/sgrillon" target="_blank" class="fa fa-stack-overflow w3-hover-text-orange w3-large"></a>
+  <a href="https://twitter.com/sgrillon" target="_blank" class="fa fa-twitter w3-hover-text-light-blue w3-large"></a>
+  <a href="https://fr.linkedin.com/in/st%25C3%25A9phane-grillon-96aa8a73" target="_blank" class="fa fa-linkedin w3-hover-text-indigo w3-large"></a>
+</footer>
+
+</body>
 </html>
