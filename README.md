@@ -1,4 +1,3 @@
-This is the source of Stéphane GRILLON public [Web site](http://sgrillon14.github.io/).
-=======
+ [CV of Stéphane GRILLON](http://sgrillon14.github.io/).
 
-This Web site is rendered with Github pages.
+[Integration Test by SoapUI and XPath](http://sgrillon14.github.io/).
